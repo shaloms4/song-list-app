@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addSong, updateSong } from '../features/songs/songsSlice';
+import { addSongStart, updateSong } from '../features/songs/songsSlice';
 
 const SongForm = ({ selectedSong, setSelectedSong }) => {
   const [title, setTitle] = useState(selectedSong ? selectedSong.title : '');
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (selectedSong) {
+      setTitle(selectedSong.title);
+    } else {
+      setTitle('');
+    }
+  }, [selectedSong]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!title.trim()) return;
+
+    console.log('Adding song:', title); // Check if this logs multiple times
     if (selectedSong) {
       dispatch(updateSong({ ...selectedSong, title }));
     } else {
-      dispatch(addSong({ userId: 1, id: Date.now(), title }));
+      dispatch(addSongStart({ userId: 1, id: Date.now(), title }));
     }
     setTitle('');
     setSelectedSong(null);

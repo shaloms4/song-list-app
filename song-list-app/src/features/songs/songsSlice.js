@@ -19,8 +19,16 @@ const songsSlice = createSlice({
       state.error = action.payload;
       state.loading = false;
     },
-    addSong(state, action) {
-      state.songs.push(action.payload);
+    addSongStart(state) {
+      state.loading = true;
+    },
+    addSongSuccess(state, action) {
+      state.songs.unshift(action.payload); // Adds the song at the beginning
+      state.loading = false;
+    },
+    addSongFailure(state, action) {
+      state.error = action.payload;
+      state.loading = false;
     },
     updateSong(state, action) {
       const index = state.songs.findIndex(song => song.id === action.payload.id);
@@ -34,5 +42,15 @@ const songsSlice = createSlice({
   },
 });
 
-export const { fetchSongsStart, fetchSongsSuccess, fetchSongsFailure, addSong, updateSong, deleteSong } = songsSlice.actions;
+export const {
+  fetchSongsStart,
+  fetchSongsSuccess,
+  fetchSongsFailure,
+  addSongStart,
+  addSongSuccess,
+  addSongFailure,
+  updateSong,
+  deleteSong,
+} = songsSlice.actions;
+
 export const songsReducer = songsSlice.reducer;

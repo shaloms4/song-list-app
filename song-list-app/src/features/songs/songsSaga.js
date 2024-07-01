@@ -1,6 +1,15 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
-import { fetchSongsStart, fetchSongsSuccess, fetchSongsFailure, addSong, updateSong, deleteSong } from './songsSlice';
+import {
+  fetchSongsStart,
+  fetchSongsSuccess,
+  fetchSongsFailure,
+  addSongStart,
+  addSongSuccess,
+  addSongFailure,
+  updateSong,
+  deleteSong,
+} from './songsSlice';
 
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -15,10 +24,10 @@ function* fetchSongs() {
 
 function* addNewSong(action) {
   try {
-    yield call(axios.post, API_URL, action.payload);
-    yield put(addSong(action.payload));
+    const response = yield call(axios.post, API_URL, action.payload);
+    yield put(addSongSuccess(response.data)); // Use the response data to ensure consistency
   } catch (error) {
-    yield put(fetchSongsFailure(error.message));
+    yield put(addSongFailure(error.message));
   }
 }
 
@@ -42,7 +51,7 @@ function* deleteExistingSong(action) {
 
 export function* watchSongsSaga() {
   yield takeEvery(fetchSongsStart.type, fetchSongs);
-  yield takeEvery(addSong.type, addNewSong);
+  yield takeEvery(addSongStart.type, addNewSong);
   yield takeEvery(updateSong.type, updateExistingSong);
   yield takeEvery(deleteSong.type, deleteExistingSong);
 }
