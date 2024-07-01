@@ -1,0 +1,38 @@
+/* HomePage.css */
+.home-page {
+    height: 100vh;
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home-page h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .home-page p {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-page a {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .home-page a:hover {
+    background-color: #c2185b;
+  }
+  
