@@ -1,7 +1,6 @@
-/* global.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
   color: #333;
 }
@@ -14,7 +13,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 html, body, #root {

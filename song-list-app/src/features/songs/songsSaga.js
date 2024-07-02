@@ -25,7 +25,7 @@ function* fetchSongs() {
 function* addNewSong(action) {
   try {
     const response = yield call(axios.post, API_URL, action.payload);
-    yield put(addSongSuccess(response.data)); // Use the response data to ensure consistency
+    yield put(addSongSuccess(response.data)); 
   } catch (error) {
     yield put(addSongFailure(error.message));
   }

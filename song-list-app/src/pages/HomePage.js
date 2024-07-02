@@ -2,10 +2,24 @@ import React from 'react';
 import './HomePage.css';
 
 const HomePage = () => (
-  <div id="home" className="home-page">
-    <h1>Let's Dive Deep into the Music World</h1>
-    <p>Explore our collection of songs and learn about our mission.</p>
-    <a href="#songs">Get Started</a>
+  <div className="home-page">
+    <div className="nav-bar">
+      <div>
+        <a href="#home">HOME</a>
+        <a href="#listen">ABOUT</a>
+      </div>
+      <div>
+        <span>ALPHA MUSIC</span>
+      </div>
+      <div>
+        <a href="#bookings">SONGS</a>
+        <a href="#tour">CONTACT</a>
+      </div>
+    </div>
+    <div className="content">
+      <h1 className="main-heading">NEW ALBUM OUT</h1>
+      <button className="button">LISTEN NOW</button>
+    </div>
   </div>
 );
 

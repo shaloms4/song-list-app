@@ -19,7 +19,7 @@ const SongForm = ({ selectedSong, setSelectedSong }) => {
     e.preventDefault();
     if (!title.trim()) return;
 
-    console.log('Adding song:', title); // Check if this logs multiple times
+    console.log('Adding song:', title); 
     if (selectedSong) {
       dispatch(updateSong({ ...selectedSong, title }));
     } else {
