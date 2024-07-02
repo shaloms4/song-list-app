@@ -1,0 +1,34 @@
+.about-page {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 80px 120px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(129, 127, 127);
+  }
+  
+  .about-page .left {
+    flex: 1;
+    margin-right: 80px;
+  }
+  
+  .about-page .left h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .about-page .left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .about-page .right {
+    flex: 1;
+    margin-top: 10px;
+  }
+  
+  .about-page .right img {
+    width: 100%;
+    height: auto;
+  }

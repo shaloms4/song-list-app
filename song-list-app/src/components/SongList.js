@@ -16,15 +16,19 @@ const SongList = ({ setSelectedSong }) => {
   if (error) return <p>{error}</p>;
 
   return (
-    <ul>
+    <div className="song-list-container">
       {songs.map((song) => (
-        <li key={song.id}>
-          {song.title}
-          <button onClick={() => setSelectedSong(song)}>Edit</button>
-          <button onClick={() => dispatch(deleteSong(song.id))}>Delete</button>
-        </li>
+        <div className="song-card" key={song.id}>
+          <div className="song-card-content">
+            <h3>{song.title}</h3>
+          </div>
+          <div className="song-actions">
+            <button onClick={() => setSelectedSong(song)}>Edit</button>
+            <button onClick={() => dispatch(deleteSong(song.id))}>Delete</button>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 
