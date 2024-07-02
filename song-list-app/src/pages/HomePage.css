@@ -68,7 +68,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 120px; 
+  padding: 10px 120px; 
   background-color: transparent;
   color: white;
   z-index: 1000;
@@ -90,4 +90,8 @@
 
 .nav-bar a:hover {
   color: rgb(185, 185, 185);
+}
+
+.nav-bar.scrolled {
+  background-color: rgba(0, 0, 0, 0.676); 
 }

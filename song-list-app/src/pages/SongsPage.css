@@ -4,6 +4,10 @@
   gap: 40px;
 }
 
+h1 {
+  margin-top:20px;
+}
+
 .song-card {
   background-color: #484343;
   border-radius: 8px;
