@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSongsStart, deleteSong } from '../features/songs/songsSlice';
+import { fetchSongsStart, updateSong, deleteSong } from '../features/songs/songsSlice';
 import './SongList.css';
 
 const SongList = () => {
@@ -19,7 +19,7 @@ const SongList = () => {
   };
 
   const handleSaveClick = (songId) => {
-    // Add save logic here
+    dispatch(updateSong({ id: songId, title: newTitle }));
     setEditingId(null);
     setNewTitle('');
   };
@@ -46,7 +46,6 @@ const SongList = () => {
                 type="text"
                 value={newTitle}
                 onChange={(e) => setNewTitle(e.target.value)}
-                className="editing-song-title"
               />
             ) : (
               <h3>{song.title}</h3>
@@ -55,8 +54,8 @@ const SongList = () => {
           <div className="song-actions">
             {editingId === song.id ? (
               <>
-                <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
-                <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
+                 <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
+                 <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
               </>
             ) : (
               <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import SongForm from '../components/SongForm';
 import SongList from '../components/SongList';
-import './SongsPage.css'
+import './SongsPage.css';
 
 const songsPageStyle = {
   padding: '50px 20px',
