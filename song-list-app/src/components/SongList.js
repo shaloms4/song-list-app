@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSongsStart, deleteSong } from '../features/songs/songsSlice';
+import './SongList.css';
 
 const SongList = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const SongList = () => {
   };
 
   const handleSaveClick = (songId) => {
-    
+    // Add save logic here
     setEditingId(null);
     setNewTitle('');
   };
@@ -45,6 +46,7 @@ const SongList = () => {
                 type="text"
                 value={newTitle}
                 onChange={(e) => setNewTitle(e.target.value)}
+                className="editing-song-title"
               />
             ) : (
               <h3>{song.title}</h3>
@@ -53,13 +55,13 @@ const SongList = () => {
           <div className="song-actions">
             {editingId === song.id ? (
               <>
-                <button onClick={() => handleSaveClick(song.id)}>Save</button>
-                <button onClick={handleCancelClick}>Cancel</button>
+                <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
+                <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
               </>
             ) : (
               <>
-                <button onClick={() => handleEditClick(song)}>Edit</button>
-                <button onClick={() => handleDeleteClick(song.id)}>Delete</button>
+                <button onClick={() => handleEditClick(song)} className="edit-button">Edit</button>
+                <button onClick={() => handleDeleteClick(song.id)} className="delete-button">Delete</button>
               </>
             )}
           </div>
