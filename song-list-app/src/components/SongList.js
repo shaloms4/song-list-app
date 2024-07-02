@@ -30,7 +30,9 @@ const SongList = () => {
   };
 
   const handleDeleteClick = (songId) => {
-    dispatch(deleteSong(songId));
+    if (window.confirm('Are you sure you want to delete this song?')) {
+      dispatch(deleteSong(songId));
+    }
   };
 
   if (loading) return <p>Loading...</p>;
@@ -54,8 +56,8 @@ const SongList = () => {
           <div className="song-actions">
             {editingId === song.id ? (
               <>
-                 <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
-                 <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
+                <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
+                <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
               </>
             ) : (
               <>
