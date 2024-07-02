@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSongsStart, updateSong, deleteSong } from '../features/songs/songsSlice';
 import './SongList.css';
@@ -9,7 +9,7 @@ const SongList = () => {
   const [editingId, setEditingId] = useState(null);
   const [newTitle, setNewTitle] = useState('');
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(fetchSongsStart());
   }, [dispatch]);
 
@@ -35,39 +35,50 @@ const SongList = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
   return (
     <div className="song-list-container">
-      {songs.map((song) => (
-        <div className="song-card" key={song.id}>
-          <div className="song-card-content">
-            {editingId === song.id ? (
-              <input
-                type="text"
-                value={newTitle}
-                onChange={(e) => setNewTitle(e.target.value)}
-              />
-            ) : (
-              <h3>{song.title}</h3>
-            )}
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : (
+        songs.map((song) => (
+          <div className="song-card" key={song.id}>
+            <div className="song-card-content">
+              {editingId === song.id ? (
+                <input
+                  type="text"
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
+                />
+              ) : (
+                <h3>{song.title}</h3>
+              )}
+            </div>
+            <div className="song-actions">
+              {editingId === song.id ? (
+                <>
+                  <button onClick={() => handleSaveClick(song.id)} className="save-button">
+                    Save
+                  </button>
+                  <button onClick={handleCancelClick} className="cancel-button">
+                    Cancel
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button onClick={() => handleEditClick(song)} className="edit-button">
+                    Edit
+                  </button>
+                  <button onClick={() => handleDeleteClick(song.id)} className="delete-button">
+                    Delete
+                  </button>
+                </>
+              )}
+            </div>
           </div>
-          <div className="song-actions">
-            {editingId === song.id ? (
-              <>
-                <button onClick={() => handleSaveClick(song.id)} className="save-button">Save</button>
-                <button onClick={handleCancelClick} className="cancel-button">Cancel</button>
-              </>
-            ) : (
-              <>
-                <button onClick={() => handleEditClick(song)} className="edit-button">Edit</button>
-                <button onClick={() => handleDeleteClick(song.id)} className="delete-button">Delete</button>
-              </>
-            )}
-          </div>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 };

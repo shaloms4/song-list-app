@@ -62,12 +62,10 @@
     border-radius: 4px;
     cursor: pointer;
   }
-
   
 .delete-button:hover {
   background-color: #d32f2f;
 }
-
 
   .edit-button {
     background-color: #007bff;
