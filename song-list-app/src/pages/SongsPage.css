@@ -36,3 +36,8 @@ h1 {
 .song-actions button {
   margin-left: 10px;
 }
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
