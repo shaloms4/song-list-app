@@ -4,26 +4,25 @@ import telegram from '../assets/telegram.png';
 import instagram from '../assets/instagram.png';
 import youtube from '../assets/youtube.png';
 
-
 const Footer = () => {
   return (
     <footer>
       <div className="footer-column">
         <h4>Company</h4>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#" className="disabled-link">About Us</a></li>
+          <li><a href="#" className="disabled-link">Blogs</a></li>
+          <li><a href="#" className="disabled-link">Terms and Conditions</a></li>
+          <li><a href="#" className="disabled-link">Privacy Policy</a></li>
         </ul>
       </div>
       <div className="footer-column">
         <h4>Services</h4>
         <ul>
-          <li><a href='#'>Workshops</a></li>
-          <li><a href='#'>Tour</a></li>
-          <li><a href='#'>Music Research</a></li>
-          <li><a href='#'>Education</a></li>
+          <li><a href="#" className="disabled-link">Workshops</a></li>
+          <li><a href="#" className="disabled-link">Tour</a></li>
+          <li><a href="#" className="disabled-link">Music Research</a></li>
+          <li><a href="#" className="disabled-link">Education</a></li>
         </ul>
       </div>
       <div className="footer-column">
