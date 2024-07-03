@@ -28,6 +28,9 @@
   z-index: 2;
   margin-bottom: 90px; 
   padding-left: 90px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start;
 }
 
 .main-heading,
@@ -60,7 +63,6 @@
   color: black;
 }
 
-    
 .nav-bar {
   position: fixed;
   top: 0;
@@ -94,4 +96,130 @@
 
 .nav-bar.scrolled {
   background-color: rgba(0, 0, 0, 0.676); 
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  z-index: 1000;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.menu a {
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: rgb(185, 185, 185);
+}
+
+.menu.open {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .nav-bar span {
+    font-size: 24px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 10px 60px; 
+  }
+
+  .nav-bar a {
+    margin: 0 15px; 
+    font-size: 0.9rem; 
+  }
+
+  .nav-bar span {
+    font-size: 24px; 
+  }
+
+  .content {
+    padding-left: 30px; 
+  }
+
+  .main-heading {
+    font-size: 3rem;
+  }
+
+  .button {
+    padding: 8px 20px; 
+    font-size: 0.9rem; 
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    display: none; 
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-bar {
+    padding: 10px 20px;
+  }
+
+  .nav-bar a {
+    margin: 0 10px; 
+    font-size: 0.8rem; 
+  }
+
+  .nav-bar span {
+    font-size: 20px;
+  }
+
+  .content {
+    padding-left: 10px;
+    margin-bottom: 70px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
+  }
+
+  .button {
+    padding: 6px 15px; 
+    font-size: 0.8rem; 
+  }
 }
