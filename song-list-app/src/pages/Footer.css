@@ -67,3 +67,15 @@ footer {
 .social-icons li a:hover img {
     filter: brightness(0.6); 
 }
+
+@media (max-width: 768px) {
+    .footer-column {
+      margin-bottom: 20px; 
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .footer-column {
+      margin-bottom: 20px; 
+    }
+  }
