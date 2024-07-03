@@ -117,3 +117,34 @@ h1 {
 .message {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .song-list-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .song-card {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .song-list-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .song-card {
+    margin: 0 10px;
+    margin-left: -10px;
+  }
+
+  .song-card-content {
+    padding: 10px;
+  }
+
+  .song-actions {
+    padding: 5px 10px;
+  }
+}
