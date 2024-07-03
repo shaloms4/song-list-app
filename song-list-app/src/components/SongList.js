@@ -38,9 +38,9 @@ const SongList = () => {
   return (
     <div className="song-list-container">
       {loading ? (
-        <p>Loading...</p>
+        <p className="message">Loading...</p>
       ) : error ? (
-        <p>{error}</p>
+        <p className="message">{error}</p>
       ) : (
         songs.map((song) => (
           <div className="song-card" key={song.id}>

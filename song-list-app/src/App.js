@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import SongsPage from './pages/SongsPage';
 import ContactPage from './pages/ContactPage';
+import Footer from './pages/Footer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <AboutPage />
         <SongsPage/>
         <ContactPage/>
+        <Footer/>
       </div>
     </Provider>
   );
