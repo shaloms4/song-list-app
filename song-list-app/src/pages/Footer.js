@@ -10,19 +10,19 @@ const Footer = () => {
       <div className="footer-column">
         <h4>Company</h4>
         <ul>
-          <li><a href="#" className="disabled-link">About Us</a></li>
-          <li><a href="#" className="disabled-link">Blogs</a></li>
-          <li><a href="#" className="disabled-link">Terms and Conditions</a></li>
-          <li><a href="#" className="disabled-link">Privacy Policy</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">About Us</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Blogs</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
         </ul>
       </div>
       <div className="footer-column">
         <h4>Services</h4>
         <ul>
-          <li><a href="#" className="disabled-link">Workshops</a></li>
-          <li><a href="#" className="disabled-link">Tour</a></li>
-          <li><a href="#" className="disabled-link">Music Research</a></li>
-          <li><a href="#" className="disabled-link">Education</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Workshops</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Tour</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Music Research</a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">Education</a></li>
         </ul>
       </div>
       <div className="footer-column">
@@ -35,9 +35,9 @@ const Footer = () => {
       <div className="footer-column">
         <h4>Follow Us</h4>
         <ul className="social-icons">
-          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={telegram} alt="Telegram" /></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Instagram" /></a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer"><img src={telegram} alt="Telegram" /></a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Instagram" /></a></li>
+          <li><a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a></li>
         </ul>
       </div>
     </footer>
