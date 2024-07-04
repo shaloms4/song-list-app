@@ -35,9 +35,9 @@ const Footer = () => {
       <div className="footer-column">
         <h4>Follow Us</h4>
         <ul className="social-icons">
-          <li><a href="" target="_blank" rel="noopener noreferrer"><img src={telegram} alt="Telegram" /></a></li>
-          <li><a href="" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Instagram" /></a></li>
-          <li><a href="" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={telegram} alt="Telegram" /></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Instagram" /></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a></li>
         </ul>
       </div>
     </footer>
