@@ -21,21 +21,3 @@ This is a full-stack application for managing a list of songs. The application a
 ### Backend
 
 - Mocked API using JSONPlaceholder
-
-## Setup Instructions
-
-1. Clone the repository:
-   git clone https://github.com/shaloms4/song-list-app
-
-
-2. Go to the folder:
-   cd song-list-app
-   
-
-3. Install the dependencies:
-   npm install
-   
-
-4. Start the development server:
-   npm start
-
